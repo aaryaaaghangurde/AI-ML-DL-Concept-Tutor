@@ -5,9 +5,14 @@ from google.genai import types
 from dotenv import load_dotenv
 import os
 
-# Load API key
 load_dotenv()
 API_KEY = os.getenv("GEMINI_API_KEY")
+
+if not API_KEY:
+    try:
+        API_KEY = st.secrets["GEMINI_API_KEY"]
+    except (KeyError, FileNotFoundError):
+        API_KEY = None
 
 # Page configuration
 st.set_page_config(
