@@ -1,0 +1,14 @@
+streamlit
+google-genai
+python-dotenv
+pandas
+matplotlib
+Pillow
+gTTS
+sentence-transformers
+transformers
+torch
+torchvision
+diffusers
+accelerate
+safetensors
